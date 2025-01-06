@@ -6,13 +6,15 @@ public class Q2 {
 		Scanner in = new Scanner (System.in);
 System.out.print("enter a number: ");
 int n = in.nextInt();
-int x = 0;
+int sum = 0;
+int last = 0;
 while (n>0) {
-	x += n% 10;
+	last = n% 10;
+	sum= sum+last;
 	n = n/10;
 }
 
-if (x % 9 == 0) {
+if (sum % 9 == 0) {
 	System.out.println("divisible by 9");
 }
 else
