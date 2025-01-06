@@ -11,11 +11,14 @@ public class Q1 {
 		System.out.print("enter 3rd number: ");
 		int c = inp.nextInt();
 		
-		System.out.println("The sum of number displayed is ");
+		System.out.println("Numbers displayed:");
 		
 		for(int i = a; i<=b; i = i+c) {
-			System.out.println(i);
+			System.out.println(i + " ");
+			sum += i;
 		}
+		 System.out.println(); // Move to the next line
+        System.out.println("The sum of numbers displayed is " + sum); // Print the sum
 	}
 
 }
