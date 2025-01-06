@@ -13,7 +13,7 @@ public class Q4 {
         int y = inp.nextInt();
 
         // Implementing Euclid's algorithm in steps
-        while (x % y != 0) {  // Check if y divides x
+        while (y != 0) {  // Check if y divides x
             int remainder = x % y;  // Compute the remainder
             x = y;                  // Update x
             y = remainder;          // Update y
