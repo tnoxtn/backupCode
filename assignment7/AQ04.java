@@ -1,6 +1,6 @@
 package assignment7;
 import java.util.Scanner;
-public class Q4 {
+public class AQ04 {
 	
 	public static double min (double[] array) {
 		double min = array[0];
