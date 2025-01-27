@@ -1,7 +1,7 @@
 
 package assignment7;
 import java.util.Scanner;
-public class q11 {
+public class AQ11 {
 	public static void main(String[] args) {
 	Scanner in = new Scanner (System.in);
 	System.out.print("Enter 10 Elements: ");
