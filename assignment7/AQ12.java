@@ -1,45 +1,56 @@
 package array;
 import java.util.Scanner;
+
 public class AQ12 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter size of array: ");
+        int size = in.nextInt();
+        
+        int a[] = new int[size];
+        System.out.println("Enter " + size + " Elements: ");
+        for (int x = 0; x < a.length; x++) {
+            a[x] = in.nextInt();
+        }
 
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-System.out.print("Enter size of array: ");
-int size = in.nextInt();
-	        System.out.println("Enter " + size +" Elements: ");
-	        int a[] = new int[size];
-	        for (int x = 0; x < a.length; x++) {
-	            a[x] = in.nextInt();
-	        }
+        System.out.println("Before Sorting:");
+        printArray(a); // Using method to print array
 
-	        System.out.println("Before Sorting:");
-	        for (int num : a) {
-	            System.out.print(num + " ");
-	        }
+        selectionSort(a); // Call the sorting method
 
-	        // Selection sort logic
-	        for (int i = 0; i < a.length; i++) {
-	            int minIndex = i;
-	            for (int j = i + 1; j < a.length; j++) {
-	                if (a[j] < a[minIndex]) {
-	                    minIndex = j;
-	                }
-	            }
-	            // Swap the minimum element with the first unsorted element
-	            int temp = a[i];
-	            a[i] = a[minIndex];
-	            a[minIndex] = temp;
-	        }
+        System.out.println("After Sorting:");
+        printArray(a); // Print sorted array
+        
+        in.close();
+    }
 
-	        System.out.println();
-	        System.out.println("After Sorting:");
-	        for (int num : a) {
-	            System.out.print(num + " ");
-	        }
+    // Selection Sort Method
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            // Swap the minimum element with the first unsorted element
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
 
-	        in.close();
-	    }
-	}
+    // Method to print array
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
 
 //Enter size of array: 7
 //Enter 7 Elements: 
